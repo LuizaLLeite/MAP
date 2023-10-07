@@ -14,4 +14,9 @@ public class Livro {
     private String isbn;
     private String editora;
     private LivroTipo tipo;
+    private CopiaDoLivro copiaDoLivro;
+
+    public CopiaDoLivro getCopiaDoLivro() {
+        return copiaDoLivro;
+    }
 }

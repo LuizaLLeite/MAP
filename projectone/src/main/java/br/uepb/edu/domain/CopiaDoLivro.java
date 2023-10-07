@@ -12,4 +12,23 @@ public class CopiaDoLivro {
     private Livro livro;
     private CopiaDoLivroSituacao situacao;
     private LiberacaoEmprestimo liberacaoEmprestimo;
+
+
+    public void marcarComoDisponivel() {
+        this.situacao = CopiaDoLivroSituacao.DISPONIVEL;
+    }
+
+    public void marcarComoIndisponivel() {
+        this.situacao = CopiaDoLivroSituacao.INDISPONIVEL;
+    }
+
+
+    public void liberarParaEmprestimo() {
+        this.liberacaoEmprestimo = LiberacaoEmprestimo.LIBERADO;
+    }
+
+
+    public void bloquearParaEmprestimo() {
+        this.liberacaoEmprestimo = LiberacaoEmprestimo.NAO_LIBERADO;
+    }
 }

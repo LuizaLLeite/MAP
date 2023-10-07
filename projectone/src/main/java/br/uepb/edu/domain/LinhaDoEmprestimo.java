@@ -12,4 +12,9 @@ import lombok.NoArgsConstructor;
 public class LinhaDoEmprestimo {
     private LocalDateTime dataPrevistaDevolucao;
     private LocalDateTime dataRealDevolucao;
+
+
+    public void registrarDataRealDevolucao(LocalDateTime dataRealDevolucao) {
+        this.dataRealDevolucao = dataRealDevolucao;
+    }
 }

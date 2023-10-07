@@ -9,4 +9,23 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Bibliotecaria {
     private String nome;
+
+    public void marcarLivroComoDisponivel(CopiaDoLivro copiaDoLivro) {
+        copiaDoLivro.marcarComoDisponivel();
+    }
+
+
+    public void marcarLivroComoIndisponivel(CopiaDoLivro copiaDoLivro) {
+        copiaDoLivro.marcarComoIndisponivel();
+    }
+
+
+    public void liberarCopiaParaEmprestimo(CopiaDoLivro copiaDoLivro) {
+        copiaDoLivro.liberarParaEmprestimo();
+    }
+
+
+    public void bloquearCopiaParaEmprestimo(CopiaDoLivro copiaDoLivro) {
+        copiaDoLivro.bloquearParaEmprestimo();
+    }
 }

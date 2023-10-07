@@ -9,6 +9,14 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Reserva {
     private int periodo;
-    private ReservaSituacao situacao;   
+    private ReservaSituacao situacao;
     private CopiaDoLivro copiaDoLivro;
+
+    public void ativarReserva() {
+        this.situacao = ReservaSituacao.ATIVO;
+    }
+
+    public void desativarReserva() {
+        this.situacao = ReservaSituacao.INATIVO;
+    }
 }
