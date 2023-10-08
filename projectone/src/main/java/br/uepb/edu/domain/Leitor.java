@@ -53,4 +53,36 @@ public class Leitor {
         return emprestimosAtivos;
     }
 
+    public LeitorTipo getTipo() {
+        return tipo;
+    }
+
+    public List<Emprestimo> getEmprestimos() {
+        return emprestimos;
+    }
+
+    public List<Reserva> getReservas() {
+        return reservas;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setEmprestimos(List<Emprestimo> emprestimos) {
+        this.emprestimos = emprestimos;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setReservas(List<Reserva> reservas) {
+        this.reservas = reservas;
+    }
+
+    public void setTipo(LeitorTipo tipo) {
+        this.tipo = tipo;
+    }
+
 }

@@ -87,4 +87,20 @@ public class Atendente {
         }
         return resultados;
     }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public List<Livro> getCatalogo() {
+        return catalogo;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setCatalogo(List<Livro> catalogo) {
+        this.catalogo = catalogo;
+    }
 }

@@ -22,4 +22,56 @@ public class Livro {
     public Livro(LivroTipo tipo) {
         this.tipo = tipo;
     }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public int getAno() {
+        return ano;
+    }
+
+    public String getIsbn() {
+        return isbn;
+    }
+
+    public String getEditora() {
+        return editora;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
+    public void setAno(int ano) {
+        this.ano = ano;
+    }
+
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
+
+    public void setEditora(String editora) {
+        this.editora = editora;
+    }
+
+    public void setTipo(LivroTipo tipo) {
+        this.tipo = tipo;
+    }
+
+    public void setCopiaDoLivro(CopiaDoLivro copiaDoLivro) {
+        this.copiaDoLivro = copiaDoLivro;
+    }
+
+    public LivroTipo getTipo() {
+        return tipo;
+    }
 }

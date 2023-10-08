@@ -13,6 +13,21 @@ public class LinhaDoEmprestimo {
     private LocalDateTime dataPrevistaDevolucao;
     private LocalDateTime dataRealDevolucao;
 
+    public LocalDateTime getDataPrevistaDevolucao() {
+        return dataPrevistaDevolucao;
+    }
+
+    public void setDataPrevistaDevolucao(LocalDateTime dataPrevistaDevolucao) {
+        this.dataPrevistaDevolucao = dataPrevistaDevolucao;
+    }
+
+    public void setDataRealDevolucao(LocalDateTime dataRealDevolucao) {
+        this.dataRealDevolucao = dataRealDevolucao;
+    }
+
+    public LocalDateTime getDataRealDevolucao() {
+        return dataRealDevolucao;
+    }
 
     public void registrarDataRealDevolucao(LocalDateTime dataRealDevolucao) {
         this.dataRealDevolucao = dataRealDevolucao;
