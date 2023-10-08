@@ -15,6 +15,8 @@ public class Atendente {
     private String nome;
     private List<Livro> catalogo = new ArrayList<>();
 
+
+
     public void registrarEmprestimo(Leitor leitor, Livro livro) {
         Emprestimo emprestimo = new Emprestimo();
         emprestimo.setDate(LocalDateTime.now());

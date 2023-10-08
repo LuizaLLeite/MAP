@@ -9,6 +9,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class CopiaDoLivro {
     private int sequencial;
+    private Livro livro;
+    private CopiaDoLivroSituacao situacao;
+    private LiberacaoEmprestimo liberacaoEmprestimo;
+
 
     public void setSequencial(int sequencial) {
         this.sequencial = sequencial;
@@ -26,7 +30,7 @@ public class CopiaDoLivro {
         this.liberacaoEmprestimo = liberacaoEmprestimo;
     }
 
-    private Livro livro;
+
 
     public int getSequencial() {
         return sequencial;
@@ -43,9 +47,6 @@ public class CopiaDoLivro {
     public LiberacaoEmprestimo getLiberacaoEmprestimo() {
         return liberacaoEmprestimo;
     }
-
-    private CopiaDoLivroSituacao situacao;
-    private LiberacaoEmprestimo liberacaoEmprestimo;
 
 
     public void marcarComoDisponivel() {

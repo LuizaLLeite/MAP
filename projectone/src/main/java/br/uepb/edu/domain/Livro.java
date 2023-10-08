@@ -16,6 +16,12 @@ public class Livro {
     private LivroTipo tipo;
     private CopiaDoLivro copiaDoLivro;
 
+    public void inicializarCopiaDoLivro() {
+        copiaDoLivro = new CopiaDoLivro();
+        copiaDoLivro.setSituacao(CopiaDoLivroSituacao.DISPONIVEL);
+    }
+
+
     public CopiaDoLivro getCopiaDoLivro() {
         return copiaDoLivro;
     }
@@ -61,6 +67,14 @@ public class Livro {
 
     public void setEditora(String editora) {
         this.editora = editora;
+    }
+
+    public void setTipo(LivroTipo tipo) {
+        this.tipo = tipo;
+    }
+
+    public void setCopiaDoLivro(CopiaDoLivro copiaDoLivro) {
+        this.copiaDoLivro = copiaDoLivro;
     }
 
     public LivroTipo getTipo() {

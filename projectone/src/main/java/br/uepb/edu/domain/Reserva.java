@@ -12,24 +12,27 @@ public class Reserva {
     private ReservaSituacao situacao;
     private CopiaDoLivro copiaDoLivro;
 
-    public void ativarReserva() {
-        this.situacao = ReservaSituacao.ATIVO;
+    public int getPeriodo() {
+        return periodo;
     }
 
-    public void desativarReserva() {
-        this.situacao = ReservaSituacao.INATIVO;
+    public ReservaSituacao getSituacao() {
+        return situacao;
     }
 
     public CopiaDoLivro getCopiaDoLivro() {
         return copiaDoLivro;
     }
 
+    public void setPeriodo(int periodo) {
+        this.periodo = periodo;
+    }
+
+    public void setSituacao(ReservaSituacao situacao) {
+        this.situacao = situacao;
+    }
+
     public void setCopiaDoLivro(CopiaDoLivro copiaDoLivro) {
-    }
-
-    public void setSituacao(ReservaSituacao reservaSituacao) {
-    }
-
-    public void setPeriodo(int i) {
+        this.copiaDoLivro = copiaDoLivro;
     }
 }

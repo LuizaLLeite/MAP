@@ -17,6 +17,9 @@ public class Leitor {
     private List<Reserva> reservas = new ArrayList<>();
     private List<Emprestimo> emprestimos = new ArrayList<>();
 
+    public Leitor(String joão, LeitorTipo leitorTipo) {
+    }
+
 
     public void adicionarReserva(Reserva reserva) {
         this.reservas.add(reserva);
