@@ -1,3 +1,7 @@
+package br.uepb.edu.domain;
+
+import br.uepb.edu.domain.Livro;
+
 public abstract class LivroBuilder{
 
     protected Livro livro;

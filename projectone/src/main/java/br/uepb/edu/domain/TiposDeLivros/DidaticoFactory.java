@@ -1,6 +1,13 @@
-public class DidaticoFactory implements LivroFactory{
+package br.uepb.edu.domain.TiposDeLivros;
+
+import br.uepb.edu.domain.Livro;
+import br.uepb.edu.domain.LivroFactory;
+import br.uepb.edu.domain.LivroTipo;
+
+
+public class DidaticoFactory implements LivroFactory {
     @Override
     public Livro criarLivro() {
-        return new didatico();
+        return new Livro(LivroTipo.DIDATICO);
     }
 }

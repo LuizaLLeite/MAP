@@ -19,4 +19,7 @@ public class Livro {
     public CopiaDoLivro getCopiaDoLivro() {
         return copiaDoLivro;
     }
+    public Livro(LivroTipo tipo) {
+        this.tipo = tipo;
+    }
 }
