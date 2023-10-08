@@ -19,4 +19,17 @@ public class Reserva {
     public void desativarReserva() {
         this.situacao = ReservaSituacao.INATIVO;
     }
+
+    public CopiaDoLivro getCopiaDoLivro() {
+        return copiaDoLivro;
+    }
+
+    public void setCopiaDoLivro(CopiaDoLivro copiaDoLivro) {
+    }
+
+    public void setSituacao(ReservaSituacao reservaSituacao) {
+    }
+
+    public void setPeriodo(int i) {
+    }
 }
