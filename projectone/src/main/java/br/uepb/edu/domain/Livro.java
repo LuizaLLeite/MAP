@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Livro {
-    public String titulo;
+    private String titulo;
     private String autor;
     private int ano;
     private String isbn;
@@ -21,11 +21,10 @@ public class Livro {
         copiaDoLivro.setSituacao(CopiaDoLivroSituacao.DISPONIVEL);
     }
 
-    public Livro(String autor){
-        this.autor=autor;}
 
-    public Livro(int ano) {
-        this.ano = ano;}
+    public Livro(String autor){this.autor=autor;}
+
+    public Livro(int ano) {this.ano = ano;}
 
     public CopiaDoLivro getCopiaDoLivro() {
         return copiaDoLivro;
@@ -46,8 +45,7 @@ public class Livro {
         return ano;
     }
 
-    public String getIsbn() {
-        return isbn;}
+    public String getIsbn() {return isbn;}
 
     public String getEditora() {
         return editora;
@@ -73,8 +71,7 @@ public class Livro {
         this.editora = editora;
     }
 
-    public void setTipo(LivroTipo tipo) {
-        this.tipo = tipo;
+    public void setTipo(LivroTipo tipo) {this.tipo = tipo;
     }
     public LivroTipo getTipo() {
         return tipo;
