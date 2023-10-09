@@ -23,12 +23,9 @@ public class Leitor {
         this.tipo = leitorTipo;
     }
 
-
     public void adicionarReserva(Reserva reserva) {
         this.reservas.add(reserva);
     }
-
-
     public void removerReserva(Reserva reserva) {
         this.reservas.remove(reserva);
     }
@@ -36,7 +33,35 @@ public class Leitor {
         emprestimos.add(emprestimo);
     }
 
+    public LeitorTipo getTipo() {
+        return tipo;
+    }
+    public void setTipo(LeitorTipo tipo) {
+        this.tipo = tipo;
+    }
 
+    public List<Emprestimo> getEmprestimos() {
+        return emprestimos;
+    }
+
+    public void setEmprestimos(List<Emprestimo> emprestimos) {
+        this.emprestimos = emprestimos;
+    }
+
+    public List<Reserva> getReservas() {
+        return reservas;
+    }
+    public void setReservas(List<Reserva> reservas) {
+        this.reservas = reservas;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
     public void removerEmprestimo(Emprestimo emprestimo) {
         Iterator<Emprestimo> iterator = emprestimos.iterator();
         while (iterator.hasNext()) {
@@ -56,38 +81,6 @@ public class Leitor {
             }
         }
         return emprestimosAtivos;
-    }
-
-    public LeitorTipo getTipo() {
-        return tipo;
-    }
-
-    public List<Emprestimo> getEmprestimos() {
-        return emprestimos;
-    }
-
-    public List<Reserva> getReservas() {
-        return reservas;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setEmprestimos(List<Emprestimo> emprestimos) {
-        this.emprestimos = emprestimos;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public void setReservas(List<Reserva> reservas) {
-        this.reservas = reservas;
-    }
-
-    public void setTipo(LeitorTipo tipo) {
-        this.tipo = tipo;
     }
 
 }

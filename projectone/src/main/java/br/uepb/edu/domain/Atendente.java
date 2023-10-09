@@ -14,9 +14,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Atendente implements Funcionario {
     private String nome;
-    private List<Livro> catalogo = new ArrayList<>();
-
-
+    private List<Livro> estoque = new ArrayList<>();
 
     public void registrarEmprestimo(Leitor leitor, Livro livro) {
         Emprestimo emprestimo = new Emprestimo();
@@ -49,14 +47,6 @@ public class Atendente implements Funcionario {
         }
     }
 
-    public void adicionarLivroAoCatalogo(Livro livro) {
-        catalogo.add(livro);
-    }
-
-    public void removerLivroDoCatalogo(Livro livro) {
-        catalogo.remove(livro);
-    }
-
     public void criarReserva(Leitor leitor, Livro livro) {
         Reserva reserva = new Reserva();
         reserva.setPeriodo(30);
@@ -76,14 +66,9 @@ public class Atendente implements Funcionario {
             }
         }
     }
-
-    public CopiaDoLivroSituacao verificarStatusLivro(Livro livro) {
-        return livro.getCopiaDoLivro().getSituacao();
-    }
-
     public List<Livro> pesquisarLivros(String termoDePesquisa) {
         List<Livro> resultados = new ArrayList<>();
-        for (Livro livro : catalogo) {
+        for (Livro livro : estoque) {
             if (livro.getTitulo().contains(termoDePesquisa) || livro.getAutor().contains(termoDePesquisa)) {
                 resultados.add(livro);
             }
@@ -91,20 +76,29 @@ public class Atendente implements Funcionario {
         return resultados;
     }
 
+    public CopiaDoLivroSituacao verificarStatusLivro(Livro livro) {
+
+        return livro.getCopiaDoLivro().getSituacao();
+    }
+    public void adicionarLivroAoEstoque(Livro livro) {
+        estoque.add(livro);
+    }
+
+    public void removerLivroDoEstoque(Livro livro) {
+        estoque.remove(livro);}
     public String getNome() {
         return nome;
     }
-
-    public List<Livro> getCatalogo() {
-        return catalogo;
-    }
-
     public void setNome(String nome) {
         this.nome = nome;
     }
 
-    public void setCatalogo(List<Livro> catalogo) {
-        this.catalogo = catalogo;
+    public List<Livro> getEstoque() {
+        return estoque;
+    }
+
+    public void setEstoque(List<Livro> Estoque) {
+        this.estoque = estoque;
     }
 
     @Override

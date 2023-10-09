@@ -31,12 +31,12 @@ public class AtendenteFacade {
         atendente.registrarDevolucao(leitor, livro);
     }
 
-    public void adicionarLivroAoCatalogo(Livro livro) {
-        atendente.adicionarLivroAoCatalogo(livro);
+    public void adicionarLivro(Livro livro) {
+        atendente.adicionarLivroAoEstoque(livro);
     }
 
-    public void removerLivroDoCatalogo(Livro livro) {
-        atendente.removerLivroDoCatalogo(livro);
+    public void removerLivro(Livro livro) {
+        atendente.removerLivroDoEstoque(livro);
     }
 
     public void criarReserva(Leitor leitor, Livro livro) {
@@ -55,11 +55,14 @@ public class AtendenteFacade {
         return atendente.pesquisarLivros(termoDePesquisa);
     }
 
-    public String getNome() {
+    public String getNomeAtendente() {
         return atendente.getNome();
     }
 
-    public List<Livro> getCatalogo() {
-        return atendente.getCatalogo();
+    public void setAtendente(Atendente atendente) {
+        this.atendente = atendente;
+    }
+    public List<Livro> getEstoque() {
+        return atendente.getEstoque();
     }
 }

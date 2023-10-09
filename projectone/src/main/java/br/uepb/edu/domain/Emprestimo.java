@@ -22,15 +22,12 @@ public class Emprestimo {
         }
         linhasDoEmprestimo.add(linhaDoEmprestimo);
     }
-
     public void marcarComoConcluido() {
         this.situacao = EmprestimoSituacao.CONCLUIDO;
     }
-
     public LocalDateTime getDate() {
         return date;
     }
-
     public void setDate(LocalDateTime date) {
         this.date = date;
     }

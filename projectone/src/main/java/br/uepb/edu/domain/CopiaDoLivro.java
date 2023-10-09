@@ -14,38 +14,33 @@ public class CopiaDoLivro {
     private LiberacaoEmprestimo liberacaoEmprestimo;
 
 
+    public int getSequencial() {
+        return sequencial;
+    }
     public void setSequencial(int sequencial) {
         this.sequencial = sequencial;
+    }
+    public Livro getLivro() {
+        return livro;
     }
 
     public void setLivro(Livro livro) {
         this.livro = livro;
     }
 
+    public CopiaDoLivroSituacao getSituacao() {
+        return situacao;}
+
     public void setSituacao(CopiaDoLivroSituacao situacao) {
         this.situacao = situacao;
-    }
-
-    public void setLiberacaoEmprestimo(LiberacaoEmprestimo liberacaoEmprestimo) {
-        this.liberacaoEmprestimo = liberacaoEmprestimo;
-    }
-
-    public int getSequencial() {
-        return sequencial;
-    }
-
-    public Livro getLivro() {
-        return livro;
-    }
-
-    public CopiaDoLivroSituacao getSituacao() {
-        return situacao;
     }
 
     public LiberacaoEmprestimo getLiberacaoEmprestimo() {
         return liberacaoEmprestimo;
     }
 
+    public void setLiberacaoEmprestimo(LiberacaoEmprestimo liberacaoEmprestimo) {
+        this.liberacaoEmprestimo = liberacaoEmprestimo;}
 
     public void marcarComoDisponivel() {
         this.situacao = CopiaDoLivroSituacao.DISPONIVEL;
@@ -55,11 +50,9 @@ public class CopiaDoLivro {
         this.situacao = CopiaDoLivroSituacao.INDISPONIVEL;
     }
 
-
     public void liberarParaEmprestimo() {
         this.liberacaoEmprestimo = LiberacaoEmprestimo.LIBERADO;
     }
-
 
     public void bloquearParaEmprestimo() {
         this.liberacaoEmprestimo = LiberacaoEmprestimo.NAO_LIBERADO;
