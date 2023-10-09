@@ -17,7 +17,10 @@ public class Leitor {
     private List<Reserva> reservas = new ArrayList<>();
     private List<Emprestimo> emprestimos = new ArrayList<>();
 
-    public Leitor(String joão, LeitorTipo leitorTipo) {
+
+    public Leitor(String nome, LeitorTipo leitorTipo) {
+        this.nome = nome;
+        this.tipo = leitorTipo;
     }
 
 
@@ -44,7 +47,6 @@ public class Leitor {
             }
         }
     }
-
 
     public List<Emprestimo> getEmprestimosAtivos() {
         List<Emprestimo> emprestimosAtivos = new ArrayList<>();

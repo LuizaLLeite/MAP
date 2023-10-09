@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.uepb.edu.domain.Interfaces.Funcionario;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,7 +12,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Atendente {
+public class Atendente implements Funcionario {
     private String nome;
     private List<Livro> catalogo = new ArrayList<>();
 
@@ -104,5 +105,10 @@ public class Atendente {
 
     public void setCatalogo(List<Livro> catalogo) {
         this.catalogo = catalogo;
+    }
+
+    @Override
+    public void realizarAtendimento() {
+        System.out.println("Atendente realizando atendimento padrão.");
     }
 }

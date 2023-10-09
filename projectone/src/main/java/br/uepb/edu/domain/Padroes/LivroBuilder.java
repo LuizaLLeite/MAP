@@ -1,4 +1,4 @@
-package br.uepb.edu.domain;
+package br.uepb.edu.domain.Padroes;
 
 import br.uepb.edu.domain.Livro;
 

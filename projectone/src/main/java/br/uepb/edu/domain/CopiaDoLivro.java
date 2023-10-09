@@ -30,8 +30,6 @@ public class CopiaDoLivro {
         this.liberacaoEmprestimo = liberacaoEmprestimo;
     }
 
-
-
     public int getSequencial() {
         return sequencial;
     }
