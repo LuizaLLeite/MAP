@@ -1,6 +1,7 @@
 package br.uepb.edu.domain;
 
 import br.uepb.edu.domain.Interfaces.Funcionario;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,6 +11,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Bibliotecaria implements Funcionario {
     private String nome;
+
     public String getNome() {
         return nome;
     }
@@ -39,6 +41,5 @@ public class Bibliotecaria implements Funcionario {
 
     @Override
     public void realizarAtendimento() {
-        System.out.println("Atendente realizando atendimento padrão.");
     }
 }

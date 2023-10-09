@@ -5,7 +5,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 @Data
@@ -17,20 +16,9 @@ public class Leitor {
     private List<Reserva> reservas = new ArrayList<>();
     private List<Emprestimo> emprestimos = new ArrayList<>();
 
-
     public Leitor(String nome, LeitorTipo leitorTipo) {
         this.nome = nome;
         this.tipo = leitorTipo;
-    }
-
-    public void adicionarReserva(Reserva reserva) {
-        this.reservas.add(reserva);
-    }
-    public void removerReserva(Reserva reserva) {
-        this.reservas.remove(reserva);
-    }
-    public void adicionarEmprestimo(Emprestimo emprestimo) {
-        emprestimos.add(emprestimo);
     }
 
     public LeitorTipo getTipo() {
@@ -62,25 +50,13 @@ public class Leitor {
     public void setNome(String nome) {
         this.nome = nome;
     }
-    public void removerEmprestimo(Emprestimo emprestimo) {
-        Iterator<Emprestimo> iterator = emprestimos.iterator();
-        while (iterator.hasNext()) {
-            Emprestimo e = iterator.next();
-            if (e.equals(emprestimo)) {
-                iterator.remove();
-                break;
-            }
-        }
+    public void adicionarReserva(Reserva reserva) {
+        this.reservas.add(reserva);
     }
-
-    public List<Emprestimo> getEmprestimosAtivos() {
-        List<Emprestimo> emprestimosAtivos = new ArrayList<>();
-        for (Emprestimo emprestimo : emprestimos) {
-            if (emprestimo.getSituacao() == EmprestimoSituacao.ATIVO) {
-                emprestimosAtivos.add(emprestimo);
-            }
-        }
-        return emprestimosAtivos;
+    public void removerReserva(Reserva reserva) {
+        this.reservas.remove(reserva);
     }
-
+    public void adicionarEmprestimo(Emprestimo emprestimo) {
+        emprestimos.add(emprestimo);
+    }
 }

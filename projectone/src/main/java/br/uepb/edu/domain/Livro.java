@@ -16,16 +16,16 @@ public class Livro {
     private LivroTipo tipo;
     private CopiaDoLivro copiaDoLivro;
 
-    public void inicializarCopiaDoLivro() {
-        copiaDoLivro = new CopiaDoLivro();
-        copiaDoLivro.setSituacao(CopiaDoLivroSituacao.DISPONIVEL);
+
+    public Livro(String titulo, String autor, int ano, String isbn, String editora, LivroTipo tipo) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.ano = ano;
+        this.isbn = isbn;
+        this.editora = editora;
+        this.tipo = tipo;
+
     }
-
-
-    public Livro(String autor){this.autor=autor;}
-
-    public Livro(int ano) {this.ano = ano;}
-
     public CopiaDoLivro getCopiaDoLivro() {
         return copiaDoLivro;
     }
@@ -45,7 +45,9 @@ public class Livro {
         return ano;
     }
 
-    public String getIsbn() {return isbn;}
+    public String getIsbn() {
+        return isbn;
+    }
 
     public String getEditora() {
         return editora;
@@ -71,10 +73,10 @@ public class Livro {
         this.editora = editora;
     }
 
-    public void setTipo(LivroTipo tipo) {this.tipo = tipo;
+    public void setTipo(LivroTipo tipo) {
+        this.tipo = tipo;
     }
     public LivroTipo getTipo() {
         return tipo;
     }
-
 }

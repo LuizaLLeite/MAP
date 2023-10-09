@@ -11,6 +11,5 @@ public class FuncionarioDecorator implements Funcionario {
 
     @Override
     public void realizarAtendimento() {
-        System.out.println("Atendente realizando atendimento padrão.");
     }
 }
